@@ -3,7 +3,7 @@
     "short_name": "Maziv",
     "start_url": "index.html",
     "scope":"./",
-    "description": "A progressive web app for Maziv Technologies Ltd.",
+    "description": "A progressive web app for Maziv Technologies Limited.",
     "version": "1.0.0",
     "icons":[
         {
