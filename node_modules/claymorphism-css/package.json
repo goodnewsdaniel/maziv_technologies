@@ -1,0 +1,70 @@
+{
+  "_from": "claymorphism-css",
+  "_id": "claymorphism-css@1.0.5",
+  "_inBundle": false,
+  "_integrity": "sha512-jbEmVsboW70OHgXRaWLWpVZT22AdrsV8kDWdalxPyqsAx5GJnBFMhHkrMAPof9PqB0sMx/axSXNJshd+OQgT3g==",
+  "_location": "/claymorphism-css",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "claymorphism-css",
+    "name": "claymorphism-css",
+    "escapedName": "claymorphism-css",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/claymorphism-css/-/claymorphism-css-1.0.5.tgz",
+  "_shasum": "82a28fc59d5ed39b088fad83b399c50746569ec4",
+  "_spec": "claymorphism-css",
+  "_where": "C:\\Users\\user\\Desktop\\Geecock Project\\Geecock Website",
+  "author": {
+    "name": "Adrian Bece",
+    "email": "adrianbece@live.com",
+    "url": "https://codeadrian.github.io"
+  },
+  "browserslist": "last 2 versions, not dead",
+  "bugs": {
+    "url": "https://github.com/codeAdrian/clay.css/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Extensible and configurable micro CSS class and SASS mixin for adding claymorphism styles to your components.",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.1.1",
+    "parcel": "^2.1.1",
+    "parcel-reporter-static-files-copy": "^1.3.4"
+  },
+  "funding": "https://www.buymeacoffee.com/ubnZ8GgDJ",
+  "homepage": "https://github.com/codeAdrian/clay.css#readme",
+  "keywords": [
+    "clay.css",
+    "claymorphism",
+    "claymorphic",
+    "clay",
+    "sass",
+    "mixin",
+    "style",
+    "css"
+  ],
+  "license": "MIT",
+  "name": "claymorphism-css",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codeAdrian/clay.css.git"
+  },
+  "scripts": {
+    "build": "parcel build src/clay.scss --dist-dir dist",
+    "dev": "parcel watch src/clay.scss --dist-dir dist",
+    "preview": "serve -s ."
+  },
+  "staticFiles": {
+    "staticPath": "src"
+  },
+  "version": "1.0.5"
+}

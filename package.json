@@ -1,0 +1,16 @@
+{
+  "name": "maziv-software",
+  "version": "1.0.0",
+  "description": "Thanks for downloading this template!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Goodnews Daniel",
+  "license": "ISC",
+  "dependencies": {
+    "@emailjs/browser": "^3.6.2",
+    "claymorphism-css": "^1.0.5",
+    "emailjs-com": "^3.2.0"
+  }
+}
