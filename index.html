@@ -98,7 +98,12 @@
             <li><a class="nav-link scrollto" href="#team">Team</a></li>
             <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
             <li>
-              <a class="getstarted scrollto" href="#services">Get Services</a>
+              <a
+                class="career"
+                data-bs-toggle="modal"
+                data-bs-target="#careerModal"
+                >Join Us</a
+              >
             </li>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
@@ -1842,7 +1847,7 @@
                   <p>
                     She is a software engineer (Frontend Developer) with
                     enormous expertise and experience in React.Js, Next.Js, and
-                    a host of other web technologies.
+                    others.
                   </p>
                   <div class="social">
                     <a href=""><i class="ri-twitter-fill"></i></a>
@@ -1901,9 +1906,8 @@
                   <h4>Odogu Eyinanabo</h4>
                   <span>Software Engineer</span>
                   <p>
-                    He is a software engineer & analyst with specialty backend
-                    development, machine learning, and cloud computing. He's got
-                    over ten years experience in the tech industry.
+                    He is a software engineer & analyst with specialty in
+                    backend development, machine learning, and cloud computing.
                   </p>
                   <div class="social">
                     <a href=""><i class="ri-twitter-fill"></i></a>
@@ -3410,6 +3414,124 @@
       <!-- Modal Dialog End -->
     </div>
     <!-- Service Modal End -->
+
+    <!-- ===== Career Modal Form Start ====== -->
+    <div
+      class="modal model-sm model-xs modal-md modal-lg modal-xl fade"
+      id="careerModal"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="careerModalLabel"
+      aria-hidden="true"
+      style="z-index: 100000"
+    >
+      <!-- Modal Dialog Start -->
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <!-- Modal Content Start -->
+        <div class="modal-content clay">
+          <div class="modal-header">
+            <h2 class="modal-title fw-bold" id="careerModalLabel">
+              Application Form
+            </h2>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row">
+                <form id="careerForm" role="form" class="email-form">
+                  <div class="row">
+                    <div class="form-group col-md-12">
+                      <input
+                        type="text"
+                        name="name"
+                        class="form-control rounded-pill"
+                        id="s_name"
+                        placeholder="Enter your name"
+                        required
+                      />
+                    </div>
+                    <div class="form-group col-md-12">
+                      <input
+                        type="email"
+                        class="form-control rounded-pill"
+                        name="email"
+                        id="s_email"
+                        placeholder="Enter your email"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <select
+                      class="form-control rounded-pill form-select"
+                      required
+                    >
+                      <option selected>Choose Role</option>
+                      <option value="1">Intern</option>
+                      <option value="2">Software Developer</option>
+                      <option value="3">UI/UX Designer</option>
+                      <option value="4">Data Scientist</option>
+                      <option value="5">Other Role(s)</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <textarea
+                      class="form-control rounded"
+                      name="message"
+                      id="s_message"
+                      rows="5"
+                      placeholder="(Optional) Kindly paste or enter your cover letter."
+                      required
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group">
+                    <input class="form-control" type="file" id="formFile" />
+                  </div>
+                  <div class="my-3">
+                    <!-- Loading Div -->
+                    <div
+                      class="loading alert alert-success clay-card--white alert-dismissible fade show col-md-6 col-sm-12"
+                    >
+                      loading
+                    </div>
+
+                    <!-- Email Error Alert -->
+                    <div
+                      class="clay-card--white alert alert-error alert-dismissible fade show col-md-6 col-sm-12 d-none"
+                      role="alert"
+                      id="service_email_error"
+                    >
+                      <strong>Error!</strong>Try again.
+                    </div>
+                    <!-- Sent-Message Div -->
+                    <div
+                      class="clay-card--white alert alert-success alert-dismissible fade show col-md-6 col-sm-12 d-none"
+                      role="alert"
+                      id="service_email_success"
+                    >
+                      <strong>Success!</strong> Application successfully sent!
+                    </div>
+                  </div>
+                  <div class="text-center">
+                    <button id="submit" type="submit">Send Application</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal Content End -->
+      </div>
+      <!-- Modal Dialog End -->
+    </div>
+    <!-- ====== Career Modal Form End====== -->
 
     <!-- Privacy Policy Modal Start -->
     <div

@@ -488,7 +488,8 @@ h6 {
 }
 
 .email-form input,
-.email-form textarea {
+.email-form textarea,
+.email-form select {
   box-shadow: none;
   font-size: 14px;
   border-radius: 10px;
@@ -496,6 +497,7 @@ h6 {
 }
 
 .email-form input:focus,
+.email-form select:focus,
 .email-form textarea:focus {
   border-color: var(--color-primary-light);
 }
@@ -634,29 +636,30 @@ h6 {
 }
 
 
-.navbar .getstarted {
+.navbar .career {
   padding: 8px 45px;
   margin-left: 20px;
   margin-right: 20px;
   border-radius: 50px;
   color: var(--color-white);
-  background: var(--color-primary-light);
+  background: var(--color-secondary);
   font-size: 14px;
-  border: 2px solid var(--color-white);
   font-weight: 700;
 }
 
-.navbar .getstarted:hover {
-  color: var(--color-white);
-  background: var(--color-primary);
-  border: 2px solid var(--color-primary-light);
+.navbar .career:hover {
+  color: var(--color-secondary);
+  background: var(--color-white);
+  border: 2px solid var(--color-secondary);
+  cursor: pointer;
+
 }
 
-.navbar .getstarted:focus {
+.navbar .career:focus {
   padding: 8px 45px;
   margin-left: 30px;
   color: var(--color-white);
-  background: var(--color-primary-light);
+  background: var(--color-secondary);
 }
 
 
@@ -1895,6 +1898,15 @@ section {
   margin-left: 8px;
 }
 
+
+
+/*--------------------------------------------------------------
+# Career
+--------------------------------------------------------------*/
+#career {
+  position: relative;
+}
+
 /*--------------------------------------------------------------
 # Pricing
 --------------------------------------------------------------*/
@@ -2551,10 +2563,15 @@ i {
   font-weight: 400;
 }
 
+.form-select select:hover{
+  background-color: var(--color-primary-light);
+}
+
 @media (max-width: 768px) {
   .php-email-form button,
   textarea,
-  input {
+  input,
+  select {
     font-size: 13px;
     width: 100%;
   }
@@ -2566,7 +2583,7 @@ i {
     font-family: inherit;
   }
 
-  .modal-dialog .php-email-form button, input {
+  .modal-dialog .php-email-form button, input{
     padding: 4px 28px;
     font-size: 13px;
   }
