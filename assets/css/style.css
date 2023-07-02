@@ -2554,17 +2554,26 @@ i {
   font-weight: 400;
 }
 
-
-.mycareer option:hover{
-  background-color: var(--color-secondary) !important;
-  color:var(--color-white);
-  overflow: hidden;
-  width: 100%;
-}
-
+/* .mycareer{
+ overflow: hidden;
+ overflow-wrap: break-word;
+ width: 100%;
+ display: inline-block;
+ white-space: pre-line;
+} */
 
 @media (max-width: 768px) {
   .php-email-form button,
+  textarea,
+  input,
+  select,
+  select option {
+    font-size: 13px;
+    width: 100%;
+  }
+
+
+  .email-form button,
   textarea,
   input,
   select,

@@ -3457,7 +3457,14 @@
           <div class="modal-body">
             <div class="container-fluid">
               <div class="row">
-                <form id="careerForm" role="form" class="email-form">
+                <form
+                  action="https://formspree.io/f/xwkdejee"
+                  method="POST"
+                  enctype="multipart/form-data"
+                  id="careerForm"
+                  role="form"
+                  class="email-form"
+                >
                   <div class="row">
                     <div class="form-group col-md-12">
                       <input
@@ -3480,10 +3487,11 @@
                       />
                     </div>
                   </div>
-                  <div class="form-group col-md-12">
+                  <div class="form-group col-md-12 col-sm-12">
                     <select
                       class="form-select form-select-sm form-control rounded-pill"
                       aria-label="form-select-sm"
+                      name="roles"
                       required
                     >
                       <option selected>Choose Role</option>
@@ -3520,7 +3528,7 @@
                     <div
                       class="clay-card--white alert alert-error alert-dismissible fade show col-md-6 col-sm-12 d-none"
                       role="alert"
-                      id="service_email_error"
+                      id="career_email_error"
                     >
                       <strong>Error!</strong>Try again.
                     </div>
@@ -3528,7 +3536,7 @@
                     <div
                       class="clay-card--white alert alert-success alert-dismissible fade show col-md-6 col-sm-12 d-none"
                       role="alert"
-                      id="service_email_success"
+                      id="career_email_success"
                     >
                       <strong>Success!</strong> Application successfully sent!
                     </div>
