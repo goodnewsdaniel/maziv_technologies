@@ -3301,20 +3301,10 @@
           (subject.value = ""),
           (message.value = "");
       }
-
-      // Clear Forms
-      function clearForm() {
-        const name = document.getElementById("s_name"),
-          email = document.getElementById("s_email"),
-          subject = document.getElementById("s_subject"),
-          message = document.getElementById("s_message");
-
-        (name.value = ""),
-          (email.value = ""),
-          (subject.value = ""),
-          (message.value = "");
-      }
     </script>
+
+    <!-- Career Form Script -->
+    <script type="text/javascript" src="/assets/js/careerForm.js"></script>
 
     <!-- MODALS SECTION START -->
     <!-- Service Modal Start -->
@@ -3457,14 +3447,21 @@
           <div class="modal-body">
             <div class="container-fluid">
               <div class="row">
-                <form id="careerForm" role="form" class="email-form">
+                <form
+                  enctype="multipart/form-data"
+                  onsubmit="careerForm()"
+                  method="post"
+                  id="careerForm"
+                  role="form"
+                  class="email-form"
+                >
                   <div class="row">
                     <div class="form-group col-md-12">
                       <input
                         type="text"
                         name="name"
                         class="form-control rounded-pill"
-                        id="s_name"
+                        id="c_name"
                         placeholder="Enter your name"
                         required
                       />
@@ -3474,7 +3471,7 @@
                         type="email"
                         class="form-control rounded-pill"
                         name="email"
-                        id="s_email"
+                        id="c_email"
                         placeholder="Enter your email"
                         required
                       />
@@ -3483,8 +3480,8 @@
                   <div class="form-group col-md-12 col-sm-12">
                     <select
                       class="form-select form-select-sm form-control rounded-pill"
-                      name="roles"
-                      id="roles"
+                      name="role"
+                      id="c_role"
                       aria-label="form-select-sm"
                       required
                     >
@@ -3500,7 +3497,7 @@
                     <textarea
                       class="form-control rounded"
                       name="message"
-                      id="s_message"
+                      id="c_message"
                       rows="5"
                       placeholder="(Optional) Kindly paste or enter your cover letter."
                       required
@@ -3508,7 +3505,7 @@
                   </div>
 
                   <div class="form-group col-md-12">
-                    <input class="form-control" type="file" id="formFile" />
+                    <input class="form-control" type="file" id="c_file" />
                   </div>
                   <div class="my-3">
                     <!-- Loading Div -->
