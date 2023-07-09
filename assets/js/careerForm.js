@@ -44,6 +44,6 @@ try {
       (name.value = ""),
       (email.value = ""),
       (role.value = ""),
-      (message.value = "");
+      (message.value = ""),
       (file.value = "");
   }

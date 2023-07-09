@@ -3305,34 +3305,41 @@
 
     <!-- Career Form Script -->
     <script>
+      import axios from "axios";
       try {
         function careerForm(event) {
           event.preventDefault();
-          //IDs
 
-          const serviceID = "service_3mah583",
-            templateID = "template_l7n12vg";
-          let success = document.getElementById("career_email_success"),
-            error = document.getElementById("career_email_error");
+          // FormSubmit Start
+          const name = document.getElementByName("name"),
+            email = document.getElementByName("email"),
+            role = document.getElementByName("role"),
+            message = document.getElementByName("message"),
+            file = document.getElementsByName("attachment").files;
 
-          emailjs.sendForm(serviceID, templateID, this).then(
-            function () {
-              success.classList.remove("d-none");
-              success.style.color = "SeaGreen";
-              setTimeout(() => {
-                success.classList.add("d-none");
-              }, 2500);
-              clearForm();
-            },
-            function () {
-              error.classList.remove("d-none");
-              error.style.color = "Red";
-              setTimeout(() => {
-                error.classList.add("d-none");
-              }, 2500);
-              clearForm();
-            }
-          );
+          const _name = name[0].value,
+            _email = email[0].value,
+            _role = role[0].value,
+            _message = message[0].value,
+            _file = file[0].value;
+
+          const _success = document.getElementById("career_email_success"),
+            _error = document.getElementById("career_email_error");
+
+          // Axios
+          axios.defaults.headers.post["Content-Type"] = "multipart/form-data";
+          axios
+            .post("https://formsubmit.co/ajax/gee4luv@gmail.com", {
+              name: _name,
+              email: _email,
+              role: _role,
+              message: _message,
+              file: _file,
+            })
+            .then((response) => (_success.style.display = block))
+            .catch((error) => (_error.style.display = none));
+
+          // FormSubmit End
         }
       } catch (error) {
         alert("Server not allowed." + error);
@@ -3496,9 +3503,9 @@
             <div class="container-fluid">
               <div class="row">
                 <form
+                  action="https://formsubmit.co/gee4luv@email.com"
                   enctype="multipart/form-data"
-                  onsubmit="careerForm()"
-                  method="post"
+                  method="POST"
                   id="careerForm"
                   role="form"
                   class="email-form"
@@ -3534,11 +3541,13 @@
                       required
                     >
                       <option selected>Choose Role</option>
-                      <option value="1">Intern</option>
-                      <option value="2">Software Developer</option>
-                      <option value="3">UI/UX Designer</option>
-                      <option value="4">Data Scientist</option>
-                      <option value="5">Other Role(s)</option>
+                      <option value="Intern">Intern</option>
+                      <option value="Software Developer">
+                        Software Developer
+                      </option>
+                      <option value="UI/UX Designer">UI/UX Designer</option>
+                      <option value="Data Scientist">Data Scientist</option>
+                      <option value="Other Role(s)">Other Role(s)</option>
                     </select>
                   </div>
                   <div class="form-group col-md-12">
@@ -3553,7 +3562,13 @@
                   </div>
 
                   <div class="form-group col-md-12">
-                    <input class="form-control" type="file" id="c_file" />
+                    <input
+                      class="form-control c_file"
+                      type="file"
+                      name="attachment"
+                      id="c_file"
+                      accept=".pdf"
+                    />
                   </div>
                   <div class="my-3">
                     <!-- Loading Div -->
