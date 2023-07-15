@@ -3304,7 +3304,7 @@
     </script>
 
     <!-- Career Form Script -->
-    <script>
+    <script type="text/javascript">
       import axios from "axios";
       try {
         // FormSubmit Start
@@ -3326,28 +3326,42 @@
         // Axios
         axios.defaults.headers.post["Content-Type"] = "multipart/form-data";
         axios
-          .post("https://formsubmit.co/ajax/gee4luv@gmail.com", {
+          .post("https://formsubmit.co/ajax/goodnewsdaniel101@gmail.com", {
             name: _name,
             email: _email,
             role: _role,
             message: _message,
             file: _file,
           })
-          .then((response) => (_success.style.display = block))
-          .catch((error) => (_error.style.display = none));
-
+          .then(
+            function () {
+              _success.classList.remove("d-none");
+              _success.style.color = "SeaGreen";
+              setTimeout(() => {
+                _success.classList.add("d-none");
+              }, 2500);
+              clear_CareerForm();
+            }.catch(function () {
+              _error.classList.remove("d-none");
+              _error.style.color = "Red";
+              setTimeout(() => {
+                _error.classList.add("d-none");
+              }, 2500);
+              clear_CareerForm();
+            })
+          );
         // FormSubmit End
       } catch (error) {
         alert("Server not allowed." + error);
       }
 
       // Clear Forms
-      function clearForm() {
+      function clear_CareerForm() {
         const name = document.getElementById("c_name"),
           email = document.getElementById("c_email"),
           role = document.getElementById("c_role"),
-          message = document.getElementById("c_message");
-        file = document.getElementById("c_file");
+          message = document.getElementById("c_message"),
+          file = document.getElementById("c_file");
 
         (name.value = ""),
           (email.value = ""),
@@ -3499,10 +3513,9 @@
             <div class="container-fluid">
               <div class="row">
                 <form
-                  action="https://formsubmit.co/gee4luv@email.com"
-                  enctype="multipart/form-data"
-                  method="POST"
                   id="careerForm"
+                  action="https://formsubmit.co/ajax/goodnewsdaniel101@gmail.com"
+                  enctype="multipart/form-data"
                   role="form"
                   class="email-form"
                 >
@@ -3566,6 +3579,13 @@
                       accept=".pdf"
                     />
                   </div>
+                  <!-- Disabled inputs -->
+                  <input
+                    type="hidden"
+                    name="_subject"
+                    value="New Application!"
+                  />
+                  <input type="hidden" name="_captcha" value="false" />
                   <div class="my-3">
                     <!-- Loading Div -->
                     <div

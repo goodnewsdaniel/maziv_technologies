@@ -1,0 +1,73 @@
+<div class="container">
+  <h1>FormSubmit Demo</h1>
+  <form
+    target="_blank"
+    action="https://formsubmit.co/goodnewsdaniel101@gmail.com"
+    method="POST"
+    enctype="multipart/form-data"
+  >
+    <div class="form-group">
+      <div class="form-row">
+        <div class="col">
+          <input
+            type="text"
+            name="name"
+            class="form-control"
+            placeholder="Full Name"
+            required
+          />
+        </div>
+        <div class="col">
+          <input
+            type="email"
+            name="email"
+            class="form-control"
+            placeholder="Email Address"
+            required
+          />
+        </div>
+      </div>
+    </div>
+    <div class="form-group col-md-12 col-sm-12">
+      <select
+        class="form-select form-select-sm form-control rounded-pill"
+        name="role"
+        id="c_role"
+        aria-label="form-select-sm"
+        required
+      >
+        <option selected>Choose Role</option>
+        <option value="Intern">Intern</option>
+        <option value="Software Developer">Software Developer</option>
+        <option value="UI/UX Designer">UI/UX Designer</option>
+        <option value="Data Scientist">Data Scientist</option>
+        <option value="Other Role(s)">Other Role(s)</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <textarea
+        placeholder="Your Message"
+        class="form-control"
+        name="message"
+        rows="10"
+        required
+      ></textarea>
+    </div>
+
+    <div class="form-group col-md-12">
+      <input
+        class="form-control c_file"
+        type="file"
+        name="attachment"
+        id="c_file"
+        accept=".pdf"
+      />
+    </div>
+    <input type="hidden" name="_subject" value="New Application!" />
+    <input type="hidden" name="_captcha" value="false" />
+    <button type="submit" class="btn btn-lg btn-dark btn-block">
+      Submit Form
+    </button>
+  </form>
+</div>
