@@ -3304,77 +3304,7 @@
     </script>
 
     <!-- Career Form Script -->
-    <!-- <script type="text/javascript">
-      import axios from "axios";
-      document
-        .getElementById("careerForm")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
-          try {
-            // FormSubmit Start
-            const name = document.getElementByName("name"),
-              email = document.getElementByName("email"),
-              role = document.getElementByName("role"),
-              message = document.getElementByName("message"),
-              file = document.getElementsByName("attachment").files;
-
-            const _name = name[0].value,
-              _email = email[0].value,
-              _role = role[0].value,
-              _message = message[0].value,
-              _file = file[0].value;
-
-            const _success = document.getElementById("career_email_success"),
-              _error = document.getElementById("career_email_error");
-
-            // Axios
-            axios.defaults.headers.post["Content-Type"] = "application/json";
-            axios
-              .post("https://formsubmit.co/ajax/goodnewsdaniel101@gmail.com", {
-                name: _name,
-                email: _email,
-                role: _role,
-                message: _message,
-                file: _file,
-              })
-              .then(
-                function () {
-                  _success.classList.remove("d-none");
-                  _success.style.color = "SeaGreen";
-                  setTimeout(() => {
-                    _success.classList.add("d-none");
-                  }, 2500);
-                  clear_CareerForm();
-                }.catch(function () {
-                  _error.classList.remove("d-none");
-                  _error.style.color = "Red";
-                  setTimeout(() => {
-                    _error.classList.add("d-none");
-                  }, 2500);
-                  clear_CareerForm();
-                })
-              );
-            // FormSubmit End
-          } catch (error) {
-            alert("Server not allowed." + error);
-          }
-        });
-
-      // Clear Forms
-      function clear_CareerForm() {
-        const name = document.getElementById("c_name"),
-          email = document.getElementById("c_email"),
-          role = document.getElementById("c_role"),
-          message = document.getElementById("c_message"),
-          file = document.getElementById("c_file");
-
-        (name.value = ""),
-          (email.value = ""),
-          (role.value = ""),
-          (message.value = "");
-        file.value = "";
-      }
-    </script> -->
+    <script type="text/javascript" src="/assets/js/careerForm.js"></script>
 
     <!-- MODALS SECTION START -->
     <!-- Service Modal Start -->
@@ -3518,12 +3448,10 @@
             <div class="container-fluid">
               <div class="row">
                 <form
-                  action="https://formsubmit.co/goodnewsdaniel101@gmail.com"
-                  method="POST"
                   id="careerForm"
-                  enctype="multipart/form-data"
                   role="form"
                   class="email-form"
+                  onsubmit="careerForm()"
                 >
                   <div class="row">
                     <div class="form-group col-md-12">
@@ -3578,28 +3506,14 @@
 
                   <div class="form-group col-md-12">
                     <input
-                      class="form-control c_file"
-                      type="file"
-                      name="attachment"
-                      id="c_file"
-                      accept=".pdf"
+                      class="form-control"
+                      type="text"
+                      name="github_profile"
+                      id="c_profile"
+                      placeholder="Enter your Github profile url"
                     />
                   </div>
-                  <!-- Disabled inputs -->
-                  <input
-                    type="hidden"
-                    name="_subject"
-                    value="New Application!"
-                  />
-                  <input type="hidden" name="_captcha" value="false" />
-                  <!-- Honeypot -->
-                  <input type="text" name="_honey" style="display: none" />
-                  <!-- form redirect -->
-                  <input
-                    type="hidden"
-                    name="_next"
-                    value="https://goodnewsdaniel.github.io/maziv_technologies/index.html#career_email_success"
-                  />
+
                   <div class="my-3">
                     <!-- Loading Div -->
                     <div
