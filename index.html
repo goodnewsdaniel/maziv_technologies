@@ -3304,7 +3304,7 @@
     </script>
 
     <!-- Career Form Script -->
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
       import axios from "axios";
       document
         .getElementById("careerForm")
@@ -3374,7 +3374,7 @@
           (message.value = "");
         file.value = "";
       }
-    </script>
+    </script> -->
 
     <!-- MODALS SECTION START -->
     <!-- Service Modal Start -->
@@ -3518,7 +3518,7 @@
             <div class="container-fluid">
               <div class="row">
                 <form
-                  action="https://formsubmit.co/ajax/goodnewsdaniel101@gmail.com"
+                  action="https://formsubmit.co/goodnewsdaniel101@gmail.com"
                   method="POST"
                   id="careerForm"
                   enctype="multipart/form-data"
@@ -3592,6 +3592,14 @@
                     value="New Application!"
                   />
                   <input type="hidden" name="_captcha" value="false" />
+                  <!-- Honeypot -->
+                  <input type="text" name="_honey" style="display: none" />
+                  <!-- form redirect -->
+                  <input
+                    type="hidden"
+                    name="_next"
+                    value="https://goodnewsdaniel.github.io/maziv_technologies/index.html#career_email_success"
+                  />
                   <div class="my-3">
                     <!-- Loading Div -->
                     <div
