@@ -3336,19 +3336,19 @@
             );
           });
       } catch (error) {
-        alert("Service not allowed.");
+        alert(error);
       }
 
       function clearForm() {
         const name = document.getElementById("c_name"),
           email = document.getElementById("c_email"),
-          subject = document.getElementById("c_subject"),
+          role = document.getElementById("c_role"),
           message = document.getElementById("c_message"),
           profile = document.getElementById("c_profile");
 
         (name.value = ""),
           (email.value = ""),
-          (subject.value = ""),
+          (role.value = ""),
           (message.value = ""),
           (profile.value = "");
       }
@@ -3388,7 +3388,7 @@
             );
           });
       } catch (error) {
-        alert("Server not allowed." + error);
+        alert(error);
       }
       //ClearForm
       function clearForm() {
@@ -3600,10 +3600,11 @@
                   <div class="form-group col-md-12">
                     <input
                       class="form-control"
-                      type="www"
+                      type="url"
                       name="github_profile"
                       id="c_profile"
                       placeholder="Enter your Github profile url"
+                      required
                     />
                   </div>
 
