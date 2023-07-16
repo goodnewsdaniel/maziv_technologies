@@ -1,3 +1,4 @@
+<!-- Career Form Code -->
 <div class="container">
   <h1>FormSubmit Demo</h1>
   <form
@@ -70,4 +71,56 @@
       Submit Form
     </button>
   </form>
+</div>
+
+<!-- Newsletter Code -->
+<div class="footer-newsletter">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 mt-5">
+        <h4>Join Our Newsletter</h4>
+        <p>
+          We will keep you regularly updated with our services and products.
+        </p>
+        <form id="subscribeForm">
+          <input
+            type="email"
+            name="email"
+            class="subEmail"
+            id="subEmail"
+            placeholder="Your Email"
+            required
+          />
+          <input type="submit" class="subSubmit" value="Subscribe" />
+        </form>
+
+        <!-- Success Alert-->
+        <div
+          class="clay clay-card clay-card--white alert alert-success alert-dismissible fade show col-md-6 col-sm-12 d-none"
+          role="alert"
+          id="sub-success"
+        >
+          <strong>Success!</strong> You've successfully subscribed!
+        </div>
+
+        <!-- Error Alert -->
+        <div
+          class="clay clay-card clay-card--white alert alert-error alert-dismissible fade show col-md-6 col-sm-12 d-none"
+          role="alert"
+          id="sub-inputError"
+        >
+          <strong>Error!</strong> Enter your email.
+        </div>
+
+        <!-- Error Alert -->
+        <div
+          class="clay clay-card clay-card--white alert alert-error alert-dismissible fade show col-md-6 col-sm-12 d-none"
+          role="alert"
+          id="sub-error"
+        >
+          <strong>Error!</strong> Something went wrong. Try again.
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
