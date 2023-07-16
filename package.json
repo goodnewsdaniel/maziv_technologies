@@ -9,7 +9,7 @@
   "author": "Goodnews Daniel",
   "license": "ISC",
   "dependencies": {
-    "@emailjs/browser": "^3.6.2",
+    "@emailjs/browser": "^3.11.0",
     "axios": "^1.4.0",
     "claymorphism-css": "^1.0.5",
     "emailjs-com": "^3.2.0"
