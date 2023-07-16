@@ -3313,7 +3313,7 @@
               event.preventDefault();
 
               const serviceID = "service_3mah583",
-                templateID = "template_sdu4w5a";
+                templateID = "template_l7n12vg";
               let success = document.getElementById("career_email_success"),
                 error = document.getElementById("career_email_error");
 
@@ -3344,15 +3344,13 @@
         function clearForm() {
           const name = document.getElementById("c_name"),
             email = document.getElementById("c_email"),
-            role = document.getElementById("c_role"),
-            message = document.getElementById("c_message"),
-            profile = document.getElementById("c_profile");
+            subject = document.getElementById("c_subject"),
+            message = document.getElementById("c_message");
 
           (name.value = ""),
             (email.value = ""),
-            (role.value = ""),
-            (message.value = ""),
-            (profile.value = "");
+            (subject.value = ""),
+            (message.value = "");
         }
       })();
     </script>
@@ -3575,23 +3573,15 @@
                       />
                     </div>
                   </div>
-                  <div class="form-group col-md-12 col-sm-12">
-                    <select
-                      class="form-select form-select-sm form-control rounded-pill"
-                      name="role"
-                      id="c_role"
-                      aria-label="form-select-sm"
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control rounded-pill"
+                      name="subject"
+                      id="c_subject"
+                      placeholder="Enter the desired Role"
                       required
-                    >
-                      <option selected>Choose Role</option>
-                      <option value="Intern">Intern</option>
-                      <option value="Software Developer">
-                        Software Developer
-                      </option>
-                      <option value="UI/UX Designer">UI/UX Designer</option>
-                      <option value="Data Scientist">Data Scientist</option>
-                      <option value="Other Role(s)">Other Role(s)</option>
-                    </select>
+                    />
                   </div>
                   <div class="form-group col-md-12">
                     <textarea
@@ -3602,17 +3592,6 @@
                       placeholder="Kindly enter your cover letter."
                       required
                     ></textarea>
-                  </div>
-
-                  <div class="form-group col-md-12">
-                    <input
-                      class="form-control rounded"
-                      type="url"
-                      name="profile"
-                      id="c_profile"
-                      placeholder="Enter your Github profile."
-                      required
-                    />
                   </div>
 
                   <div class="my-3">
