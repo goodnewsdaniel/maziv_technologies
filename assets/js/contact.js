@@ -1,7 +1,5 @@
 import emailjs from '@emailjs/browser';
-(function (){
-  
-  emailjs.init("user_kCQ6DSaDUM0uTzD86zhxg");
+emailjs.init("user_kCQ6DSaDUM0uTzD86zhxg");
   try {
     document.getElementById("ContactForm").addEventListener("submit", function (event) {
       event.preventDefault();
@@ -47,5 +45,3 @@ function clearForm() {
     (subject.value = ""),
     (message.value = "");
 }
-
-})()
