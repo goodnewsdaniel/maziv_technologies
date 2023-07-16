@@ -3252,159 +3252,165 @@
     <!--End of Tawk.to Script-->
     <!-- Service Request Form -->
     <script type="text/javascript">
-      try {
-        const service = document.getElementById("ServiceForm");
-        if (service) {
-          service.addEventListener("submit", function (event) {
-            event.preventDefault();
-            //IDs
+      (function () {
+        try {
+          const service = document.getElementById("ServiceForm");
+          if (service) {
+            service.addEventListener("submit", function (event) {
+              event.preventDefault();
+              //IDs
 
-            const serviceID = "service_3mah583",
-              templateID = "template_l7n12vg";
-            let success = document.getElementById("service_email_success"),
-              error = document.getElementById("service_email_error");
+              const serviceID = "service_3mah583",
+                templateID = "template_l7n12vg";
+              let success = document.getElementById("service_email_success"),
+                error = document.getElementById("service_email_error");
 
-            emailjs.sendForm(serviceID, templateID, this).then(
-              function () {
-                success.classList.remove("d-none");
-                success.style.color = "SeaGreen";
-                setTimeout(() => {
-                  success.classList.add("d-none");
-                }, 2500);
-                clearForm();
-              },
-              function () {
-                error.classList.remove("d-none");
-                error.style.color = "Red";
-                setTimeout(() => {
-                  error.classList.add("d-none");
-                }, 2500);
-                clearForm();
-              }
-            );
-          });
+              emailjs.sendForm(serviceID, templateID, this).then(
+                function () {
+                  success.classList.remove("d-none");
+                  success.style.color = "SeaGreen";
+                  setTimeout(() => {
+                    success.classList.add("d-none");
+                  }, 2500);
+                  clearForm();
+                },
+                function () {
+                  error.classList.remove("d-none");
+                  error.style.color = "Red";
+                  setTimeout(() => {
+                    error.classList.add("d-none");
+                  }, 2500);
+                  clearForm();
+                }
+              );
+            });
+          }
+          //End of if
+        } catch (error) {
+          alert("Server not allowed." + error);
         }
-        //End of if
-      } catch (error) {
-        alert("Server not allowed." + error);
-      }
 
-      // Clear Forms
-      function clearForm() {
-        const name = document.getElementById("s_name"),
-          email = document.getElementById("s_email"),
-          subject = document.getElementById("s_subject"),
-          message = document.getElementById("s_message");
+        // Clear Forms
+        function clearForm() {
+          const name = document.getElementById("s_name"),
+            email = document.getElementById("s_email"),
+            subject = document.getElementById("s_subject"),
+            message = document.getElementById("s_message");
 
-        (name.value = ""),
-          (email.value = ""),
-          (subject.value = ""),
-          (message.value = "");
-      }
+          (name.value = ""),
+            (email.value = ""),
+            (subject.value = ""),
+            (message.value = "");
+        }
+      })();
     </script>
 
     <!-- Career Form Script -->
     <script type="text/javascript">
-      try {
-        const career = document.getElementById("careerForm");
-        if (career) {
-          career.addEventListener("submit", function (event) {
-            event.preventDefault();
+      (function () {
+        try {
+          const career = document.getElementById("careerForm");
+          if (career) {
+            career.addEventListener("submit", function (event) {
+              event.preventDefault();
 
-            const serviceID = "service_3mah583",
-              templateID = "template_sdu4w5a";
-            let success = document.getElementById("career_email_success"),
-              error = document.getElementById("career_email_error");
+              const serviceID = "service_3mah583",
+                templateID = "template_sdu4w5a";
+              let success = document.getElementById("career_email_success"),
+                error = document.getElementById("career_email_error");
 
-            emailjs.sendForm(serviceID, templateID, this).then(
-              function () {
-                success.classList.remove("d-none");
-                success.style.color = "SeaGreen";
-                setTimeout(() => {
-                  success.classList.add("d-none");
-                }, 2500);
-                clearForm();
-              },
-              function () {
-                error.classList.remove("d-none");
-                error.style.color = "Red";
-                setTimeout(() => {
-                  error.classList.add("d-none");
-                }, 2500);
-                clearForm();
-              }
-            );
-          });
+              emailjs.sendForm(serviceID, templateID, this).then(
+                function () {
+                  success.classList.remove("d-none");
+                  success.style.color = "SeaGreen";
+                  setTimeout(() => {
+                    success.classList.add("d-none");
+                  }, 2500);
+                  clearForm();
+                },
+                function () {
+                  error.classList.remove("d-none");
+                  error.style.color = "Red";
+                  setTimeout(() => {
+                    error.classList.add("d-none");
+                  }, 2500);
+                  clearForm();
+                }
+              );
+            });
+          }
+        } catch (error) {
+          alert("Service not allowed." + error);
         }
-      } catch (error) {
-        alert("Service not allowed." + error);
-      }
 
-      function clearForm() {
-        const name = document.getElementById("c_name"),
-          email = document.getElementById("c_email"),
-          role = document.getElementById("c_role"),
-          message = document.getElementById("c_message"),
-          profile = document.getElementById("c_profile");
+        function clearForm() {
+          const name = document.getElementById("c_name"),
+            email = document.getElementById("c_email"),
+            role = document.getElementById("c_role"),
+            message = document.getElementById("c_message"),
+            profile = document.getElementById("c_profile");
 
-        (name.value = ""),
-          (email.value = ""),
-          (role.value = ""),
-          (message.value = ""),
-          (profile.value = "");
-      }
+          (name.value = ""),
+            (email.value = ""),
+            (role.value = ""),
+            (message.value = ""),
+            (profile.value = "");
+        }
+      })();
     </script>
 
     <!-- Contact Form Start -->
     <script type="text/javascript">
-      try {
-        const contact = document.getElementById("ContactForm");
+      (function () {
+        try {
+          const contact = document.getElementById("ContactForm");
 
-        if (contact) {
-          contact.addEventListener("submit", function (event) {
-            event.preventDefault();
-            // these IDs from the previous
-            const serviceID = "service_3mah583",
-              templateID = "template_l7n12vg";
-            let success = document.getElementById("email_success"),
-              error = document.getElementById("email_error"),
-              submit = document.getElementById("submit");
+          if (contact) {
+            contact.addEventListener("submit", function (event) {
+              event.preventDefault();
+              // these IDs from the previous
+              const serviceID = "service_3mah583",
+                templateID = "template_l7n12vg";
+              let success = document.getElementById("email_success"),
+                error = document.getElementById("email_error"),
+                submit = document.getElementById("submit");
 
-            emailjs.sendForm(serviceID, templateID, this).then(
-              function () {
-                success.classList.remove("d-none");
-                success.style.color = "SeaGreen";
-                setTimeout(() => {
-                  success.classList.add("d-none");
-                }, 2500);
-                clearForm();
-              },
-              function () {
-                error.classList.remove("d-none");
-                error.style.color = "red";
-                setTimeout(() => {
-                  error.classList.add("d-none");
-                }, 2500);
-                clearForm();
-              }
-            );
-          });
+              emailjs.sendForm(serviceID, templateID, this).then(
+                function () {
+                  success.classList.remove("d-none");
+                  success.style.color = "SeaGreen";
+                  setTimeout(() => {
+                    success.classList.add("d-none");
+                  }, 2500);
+                  clearForm();
+                },
+                function () {
+                  error.classList.remove("d-none");
+                  error.style.color = "red";
+                  setTimeout(() => {
+                    error.classList.add("d-none");
+                  }, 2500);
+                  clearForm();
+                }
+              );
+            });
+          }
+        } catch (error) {
+          alert("Service not allowed." + error);
         }
-      } catch (error) {
-        alert("Service not allowed." + error);
-      }
-      //ClearForm
-      function clearForm() {
-        const name = document.getElementById("name"),
-          email = document.getElementById("email"),
-          subject = document.getElementById("subject"),
-          message = document.getElementById("message");
+        //ClearForm
+        function clearForm() {
+          const name = document.getElementById("name"),
+            email = document.getElementById("email"),
+            subject = document.getElementById("subject"),
+            message = document.getElementById("message");
 
-        (name.value = ""),
-          (email.value = ""),
-          (subject.value = ""),
-          (message.value = "");
-      }
+          (name.value = ""),
+            (email.value = ""),
+            (subject.value = ""),
+            (message.value = "");
+        }
+      })();
     </script>
     <!-- Contact Form End -->
     <!-- MODALS SECTION START -->
