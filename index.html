@@ -3312,7 +3312,7 @@
             event.preventDefault();
 
             const serviceID = "service_3mah583",
-              templateID = "template_l7n12vg";
+              templateID = "template_sdu4w5a";
             let success = document.getElementById("career_email_success"),
               error = document.getElementById("career_email_error");
 
@@ -3358,40 +3358,38 @@
     <!-- Contact Form Start -->
     <script type="text/javascript">
       try {
-        const contact = document
-          .getElementById("ContactForm");
+        const contact = document.getElementById("ContactForm");
 
+        if (contact) {
+          contact.addEventListener("submit", function (event) {
+            event.preventDefault();
+            // these IDs from the previous
+            const serviceID = "service_3mah583",
+              templateID = "template_l7n12vg";
+            let success = document.getElementById("email_success"),
+              error = document.getElementById("email_error"),
+              submit = document.getElementById("submit");
 
-          if(contact){
-            contact.addEventListener("submit", function (event) {
-              event.preventDefault();
-              // these IDs from the previous
-              const serviceID = "service_3mah583",
-                templateID = "template_l7n12vg";
-              let success = document.getElementById("email_success"),
-                error = document.getElementById("email_error"),
-                submit = document.getElementById("submit");
-  
-              emailjs.sendForm(serviceID, templateID, this).then(
-                function () {
-                  success.classList.remove("d-none");
-                  success.style.color = "SeaGreen";
-                  setTimeout(() => {
-                    success.classList.add("d-none");
-                  }, 2500);
-                  clearForm();
-                },
-                function () {
-                  error.classList.remove("d-none");
-                  error.style.color = "red";
-                  setTimeout(() => {
-                    error.classList.add("d-none");
-                  }, 2500);
-                  clearForm();
-                }
-              );
-            });
-          }
+            emailjs.sendForm(serviceID, templateID, this).then(
+              function () {
+                success.classList.remove("d-none");
+                success.style.color = "SeaGreen";
+                setTimeout(() => {
+                  success.classList.add("d-none");
+                }, 2500);
+                clearForm();
+              },
+              function () {
+                error.classList.remove("d-none");
+                error.style.color = "red";
+                setTimeout(() => {
+                  error.classList.add("d-none");
+                }, 2500);
+                clearForm();
+              }
+            );
+          });
+        }
       } catch (error) {
         alert("Service not allowed." + error);
       }
@@ -3556,8 +3554,8 @@
                       <input
                         type="text"
                         name="name"
-                        class="form-control rounded-pill"
                         id="c_name"
+                        class="form-control rounded-pill"
                         placeholder="Enter your name"
                         required
                       />
@@ -3597,18 +3595,18 @@
                       name="message"
                       id="c_message"
                       rows="5"
-                      placeholder="(Optional) Kindly paste or enter your cover letter."
+                      placeholder="Kindly enter your cover letter."
                       required
                     ></textarea>
                   </div>
 
                   <div class="form-group col-md-12">
                     <input
-                      class="form-control"
+                      class="form-control rounded"
                       type="url"
-                      name="github_profile"
+                      name="profile"
                       id="c_profile"
-                      placeholder="Enter your Github profile url"
+                      placeholder="Enter your Github profile."
                       required
                     />
                   </div>
