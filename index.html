@@ -3230,10 +3230,6 @@
         emailjs.init("user_kCQ6DSaDUM0uTzD86zhxg");
       })();
     </script>
-    <!-- ContactForm Email -->
-    <script type="text/javascript" src="/assets/js/contact.js"></script>
-    <!-- Subscription Form -->
-    <!-- <script type="text/javascript" src="/assets/js/emailsub.js"></script> -->
 
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
@@ -3253,42 +3249,44 @@
     <!-- Service Request Form -->
     <script type="text/javascript">
       (function () {
-        try {
-          const service = document.getElementById("ServiceForm");
-          if (service) {
-            service.addEventListener("submit", function (event) {
-              event.preventDefault();
-              //IDs
+        window.onload = function () {
+          try {
+            const service = document.getElementById("ServiceForm");
+            if (service) {
+              service.addEventListener("submit", function (event) {
+                event.preventDefault();
+                //IDs
 
-              const serviceID = "service_3mah583",
-                templateID = "template_l7n12vg";
-              let success = document.getElementById("service_email_success"),
-                error = document.getElementById("service_email_error");
+                const serviceID = "service_3mah583",
+                  templateID = "template_l7n12vg";
+                let success = document.getElementById("service_email_success"),
+                  error = document.getElementById("service_email_error");
 
-              emailjs.sendForm(serviceID, templateID, this).then(
-                function () {
-                  success.classList.remove("d-none");
-                  success.style.color = "SeaGreen";
-                  setTimeout(() => {
-                    success.classList.add("d-none");
-                  }, 2500);
-                  clearForm();
-                },
-                function () {
-                  error.classList.remove("d-none");
-                  error.style.color = "Red";
-                  setTimeout(() => {
-                    error.classList.add("d-none");
-                  }, 2500);
-                  clearForm();
-                }
-              );
-            });
+                emailjs.sendForm(serviceID, templateID, this).then(
+                  function () {
+                    success.classList.remove("d-none");
+                    success.style.color = "SeaGreen";
+                    setTimeout(() => {
+                      success.classList.add("d-none");
+                    }, 2500);
+                    clearForm();
+                  },
+                  function () {
+                    error.classList.remove("d-none");
+                    error.style.color = "Red";
+                    setTimeout(() => {
+                      error.classList.add("d-none");
+                    }, 2500);
+                    clearForm();
+                  }
+                );
+              });
+            }
+            //End of if
+          } catch (error) {
+            alert("Server not allowed." + error);
           }
-          //End of if
-        } catch (error) {
-          alert("Server not allowed." + error);
-        }
+        };
 
         // Clear Forms
         function clearForm() {
@@ -3360,7 +3358,7 @@
     </script>
 
     <!-- Contact Form Start -->
-    <!-- <script type="text/javascript">
+    <script type="text/javascript">
       (function () {
         try {
           const contact = document.getElementById("ContactForm");
@@ -3411,7 +3409,7 @@
             (message.value = "");
         }
       })();
-    </script> -->
+    </script>
     <!-- Contact Form End -->
     <!-- MODALS SECTION START -->
     <!-- Service Modal Start -->
