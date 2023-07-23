@@ -2159,7 +2159,7 @@ section {
 
 .contact .info {
   border: 2px solid var(--color-primary-light);
-  padding:1.875rem;
+  padding: 0.625rem;
   background: var(--color-white);
   width: 100%;
   border-radius: 50px;
@@ -2249,6 +2249,13 @@ section {
   color: var(--color-white);
 }
 
+/* Google ReCaptCha */
+.g-recaptcha{
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  border-radius: 50px;
+  width: 100%;
+}
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
