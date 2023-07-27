@@ -2249,13 +2249,6 @@ section {
   color: var(--color-white);
 }
 
-/* Google ReCaptCha */
-.g-recaptcha{
-  background-color: var(--color-secondary);
-  color: var(--color-white);
-  border-radius: 50px;
-  width: 100%;
-}
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
