@@ -14,6 +14,34 @@
       name="keywords"
     />
 
+    <!-- Meta Names to Support Add To Screen -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-capable-status-bar-style"
+      content="black"
+    />
+    <meta
+      name="apple-mobile-web-app-capable-title"
+      content="Maziv Technologies"
+    />
+
+    <!-- Add To Home Screen  -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./add-to-homescreen/style/addtohomescreen.css"
+    />
+    <script src="./add-to-homescreen/src/addtohomescreen.js"></script>
+    <script>
+      if (
+        ("standalone" in window.navigator && !window.navigator.standalone) || //IOS
+        !window.matchMedia("(display-mode:standalone)").matches //Android
+      ) {
+        addToHomescreen();
+      }
+    </script>
+
     <!-- Favicons -->
     <link href="assets/img/favicons/favicon.ico" rel="icon" />
     <link
