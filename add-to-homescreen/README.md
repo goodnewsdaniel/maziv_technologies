@@ -17,6 +17,15 @@ Add `addtohomescreen.css` and `addtohomescreen.js` to the head of your projects 
 <script>
 addToHomescreen();
 </script>
+<!-- OR -->
+<script>
+    if (
+        ("standalone" in window.navigator && !window.navigator.standalone) || //IOS
+        !window.matchMedia("(display-mode:standalone)").matches //Android
+      ) {
+        addToHomescreen();
+      }
+</script>
 </head>
 ```
 

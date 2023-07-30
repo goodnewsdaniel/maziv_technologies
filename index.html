@@ -26,27 +26,31 @@
       content="Maziv Technologies"
     />
 
-    <!-- Add To Home Screen  -->
-    <!-- <link
-      rel="stylesheet"
-      type="text/css"
-      href="add-to-homescreen/style/addtohomescreen.css"
-    />
-    <script src="add-to-homescreen/src/addtohomescreen.js"></script>
-    <script>
-      if (
-        ("standalone" in window.navigator && !window.navigator.standalone) || //IOS
-        !window.matchMedia("(display-mode:standalone)").matches //Android
-      ) {
-        addToHomescreen();
-      }
-    </script> -->
-
     <!-- Favicons -->
     <link href="assets/img/favicons/favicon.ico" rel="icon" />
     <link
+      rel="shortcut icon"
+      href="assets/img/favicons/favicon-16x16.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicons/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link
       href="assets/img/favicons/apple-touch-icon.png"
       rel="apple-touch-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicons/android-chrome-192x192.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicons/android-chrome-512x512.png"
+      type="image/x-icon"
     />
 
     <!-- Google Fonts -->
@@ -95,6 +99,17 @@
 
     <!-- PWA Manifest -->
     <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" type="text/css" href="add-to-homescreen/style/addtohomescreen.css">
+    <script src="add-to-homescreen/src/addtohomescreen.js"></script>
+    
+    <script>
+      if (
+            ("standalone" in window.navigator && !window.navigator.standalone) || //IOS
+            !window.matchMedia("(display-mode:standalone)").matches //Android
+      ) {
+        addToHomescreen();
+      }
+  </script>
   </head>
 
   <body onmousedown="return false" onselectstart="return false">
