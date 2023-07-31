@@ -99,19 +99,22 @@
 
     <!-- PWA Manifest -->
     <link rel="manifest" href="manifest.json" />
-    <link rel="stylesheet" type="text/css" href="add-to-homescreen/style/addtohomescreen.css">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="add-to-homescreen/style/addtohomescreen.css"
+    />
     <script src="add-to-homescreen/src/addtohomescreen.js"></script>
-    
+
     <script>
       if (
-            ("standalone" in window.navigator && !window.navigator.standalone) || //IOS
-            !window.matchMedia("(display-mode:standalone)").matches //Android
+        ("standalone" in window.navigator && !window.navigator.standalone) || //IOS
+        !window.matchMedia("(display-mode:standalone)").matches //Android
       ) {
         addToHomescreen();
       }
-  </script>
+    </script>
   </head>
-
   <body onmousedown="return false" onselectstart="return false">
     <!-- Cookie Consent  Start -->
     <div id="cookiePopup" class="container clay clay-card clay-card--white">
@@ -3182,6 +3185,21 @@
     <script src="assets/js/cookie.js"></script>
     <!-- Service Worker for PWA -->
     <script src="/assets/js/sw-register.js"></script>
+
+    <!-- Google Analytics || Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-TS78TH9RHB"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-TS78TH9RHB");
+    </script>
     <!-- EMailJs CDN -->
     <script
       type="text/javascript"
@@ -3194,7 +3212,7 @@
     </script>
     <!-- Disable Right Click -->
     <script type="text/javascript">
-      document.oncontextmenu = new Function("return false");
+      // document.oncontextmenu = new Function("return false");
     </script>
     <!-- The Normal Automatically Rendered ReCaptCha -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -3225,8 +3243,8 @@
                 event.preventDefault();
                 //IDs
 
-                const serviceID = "service_3mah583",
-                  templateID = "template_l7n12vg";
+                const serviceID = "service_r5eelu7",
+                  templateID = "template_un6nr4m";
                 let success = document.getElementById("service_email_success"),
                   error = document.getElementById("service_email_error");
 
@@ -3280,8 +3298,8 @@
             career.addEventListener("submit", function (event) {
               event.preventDefault();
 
-              const serviceID = "service_3mah583",
-                templateID = "template_l7n12vg";
+              const serviceID = "service_r5eelu7",
+                templateID = "template_un6nr4m";
               let success = document.getElementById("career_email_success"),
                 error = document.getElementById("career_email_error");
 
@@ -3333,8 +3351,8 @@
             contact.addEventListener("submit", function (event) {
               event.preventDefault();
               // these IDs from the previous
-              const serviceID = "service_3mah583",
-                templateID = "template_l7n12vg";
+              const serviceID = "service_r5eelu7",
+                templateID = "template_un6nr4m";
               let success = document.getElementById("email_success"),
                 error = document.getElementById("email_error"),
                 submit = document.getElementById("submit");
