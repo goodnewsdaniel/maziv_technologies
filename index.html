@@ -99,22 +99,8 @@
 
     <!-- PWA Manifest -->
     <link rel="manifest" href="manifest.json" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="add-to-homescreen/style/addtohomescreen.css"
-    />
-    <script src="add-to-homescreen/src/addtohomescreen.js"></script>
-
-    <script>
-      if (
-        ("standalone" in window.navigator && !window.navigator.standalone) || //IOS
-        !window.matchMedia("(display-mode:standalone)").matches //Android
-      ) {
-        addToHomescreen();
-      }
-    </script>
   </head>
+
   <body onmousedown="return false" onselectstart="return false">
     <!-- Cookie Consent  Start -->
     <div id="cookiePopup" class="container clay clay-card clay-card--white">
@@ -644,14 +630,6 @@
 
       <!-- ======= Services Section ======= -->
       <section id="services" class="services section-bg">
-        <!-- Animated Background -->
-        <!-- <div class="background">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div> -->
-
         <div class="container mb-5" data-aos="fade-up">
           <div class="section-title">
             <h2>Our Services</h2>
@@ -811,13 +789,6 @@
 
       <!--START SECTION 4: SERVICES -->
       <section id="services_2" class="services_2">
-        <!-- Animated Background -->
-        <!-- <div class="background">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div> -->
         <!-- START THE DESCRIPTION CONTENT -->
         <div class="container mb-5" data-aos="fade-up" data-aos-delay="300">
           <div class="row pt-2 pb-2 mt-0 mb-2">
@@ -1197,13 +1168,6 @@
 
       <!-- ======= Cta Section ======= -->
       <section id="cta" class="cta">
-        <!-- Animated Background -->
-        <!-- <div class="background">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div> -->
         <div
           class="container clay clay-card clay-card--white mb-5"
           data-aos="zoom-in"
@@ -1257,13 +1221,6 @@
 
       <!-- ======= Portfolio Section ======= -->
       <section id="portfolio" class="portfolio">
-        <!-- Animated Background -->
-        <!-- <div class="background">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div> -->
         <div class="container mb-5 clay clay-card" data-aos="fade-up">
           <div class="section-title pt-4">
             <h2>Our Portfolio</h2>
@@ -1777,13 +1734,6 @@
 
       <!-- ======= Team Section ======= -->
       <section id="team" class="team section-bg">
-        <!-- Animated Background -->
-        <!-- <div class="background">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div> -->
         <div class="container clay clay-card mb-5" data-aos="fade-up">
           <div class="section-title">
             <h2>Our Team</h2>
@@ -2463,13 +2413,6 @@
 
       <!-- ============= Technology Stack ================= -->
       <section id="stack" class="stack section-bg">
-        <!-- Animated Background -->
-        <!-- <div class="background">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div> -->
         <div class="container mb-5" data-aos="fade-up" data-aos-delay="200">
           <div class="section-title">
             <h2>Our Tech Stack</h2>
@@ -3185,21 +3128,6 @@
     <script src="assets/js/cookie.js"></script>
     <!-- Service Worker for PWA -->
     <script src="/assets/js/sw-register.js"></script>
-
-    <!-- Google Analytics || Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-TS78TH9RHB"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-TS78TH9RHB");
-    </script>
     <!-- EMailJs CDN -->
     <script
       type="text/javascript"
@@ -3212,7 +3140,7 @@
     </script>
     <!-- Disable Right Click -->
     <script type="text/javascript">
-      // document.oncontextmenu = new Function("return false");
+      document.oncontextmenu = new Function("return false");
     </script>
     <!-- The Normal Automatically Rendered ReCaptCha -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -3243,8 +3171,8 @@
                 event.preventDefault();
                 //IDs
 
-                const serviceID = "service_r5eelu7",
-                  templateID = "template_un6nr4m";
+                const serviceID = "service_3mah583",
+                  templateID = "template_l7n12vg";
                 let success = document.getElementById("service_email_success"),
                   error = document.getElementById("service_email_error");
 
@@ -3298,8 +3226,8 @@
             career.addEventListener("submit", function (event) {
               event.preventDefault();
 
-              const serviceID = "service_r5eelu7",
-                templateID = "template_un6nr4m";
+              const serviceID = "service_3mah583",
+                templateID = "template_l7n12vg";
               let success = document.getElementById("career_email_success"),
                 error = document.getElementById("career_email_error");
 
@@ -3351,8 +3279,8 @@
             contact.addEventListener("submit", function (event) {
               event.preventDefault();
               // these IDs from the previous
-              const serviceID = "service_r5eelu7",
-                templateID = "template_un6nr4m";
+              const serviceID = "service_3mah583",
+                templateID = "template_l7n12vg";
               let success = document.getElementById("email_success"),
                 error = document.getElementById("email_error"),
                 submit = document.getElementById("submit");
