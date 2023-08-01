@@ -2563,14 +2563,6 @@ i {
   font-weight: 400;
 }
 
-/* .mycareer{
- overflow: hidden;
- overflow-wrap: break-word;
- width: 100%;
- display: inline-block;
- white-space: pre-line;
-} */
-
 @media (max-width: 768px) {
   .php-email-form button,
   textarea,
