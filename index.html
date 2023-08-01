@@ -100,8 +100,16 @@
     <!-- PWA Manifest -->
     <link rel="manifest" href="manifest.json" />
   </head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TS78TH9RHB"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-TS78TH9RHB');
+  </script>
 
-  <body onmousedown="return false" onselectstart="return false">
+  <body onselectstart="return false">
     <!-- Cookie Consent  Start -->
     <div id="cookiePopup" class="container clay clay-card clay-card--white">
       <h4>Cookie Consent</h4>
@@ -3171,8 +3179,8 @@
                 event.preventDefault();
                 //IDs
 
-                const serviceID = "service_3mah583",
-                  templateID = "template_l7n12vg";
+                const serviceID = "service_r5eelu7",
+                  templateID = "template_un6nr4m";
                 let success = document.getElementById("service_email_success"),
                   error = document.getElementById("service_email_error");
 
@@ -3226,8 +3234,8 @@
             career.addEventListener("submit", function (event) {
               event.preventDefault();
 
-              const serviceID = "service_3mah583",
-                templateID = "template_l7n12vg";
+              const serviceID = "service_r5eelu7",
+                templateID = "template_un6nr4m";
               let success = document.getElementById("career_email_success"),
                 error = document.getElementById("career_email_error");
 
@@ -3279,8 +3287,8 @@
             contact.addEventListener("submit", function (event) {
               event.preventDefault();
               // these IDs from the previous
-              const serviceID = "service_3mah583",
-                templateID = "template_l7n12vg";
+              const serviceID = "service_r5eelu7",
+                templateID = "template_un6nr4m";
               let success = document.getElementById("email_success"),
                 error = document.getElementById("email_error"),
                 submit = document.getElementById("submit");
