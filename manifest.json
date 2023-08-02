@@ -1,6 +1,6 @@
 {
-    "name": "Maziv Technologies",
-    "short_name": "Maziv",
+    "name": "Maziv Technologies Limited",
+    "short_name": "Maziv Tech",
     "start_url": "index.html",
     "scope":"./",
     "description": "A progressive web app for Maziv Technologies Limited.",
@@ -40,7 +40,7 @@
         }
     ],
     "theme_color": "#303030",
-    "background_color": "#0975a7",
+    "background_color": "#f76d6d",
     "display":"standalone"
   }
   
