@@ -920,7 +920,7 @@ h6 {
 #hero .btn-get-started:hover {
   background: var(--color-white);
   border: none;
-  color:var(--color-secondary)
+  color:var(--color-secondary);
 }
 
 #hero .btn-watch-video {
@@ -1528,6 +1528,7 @@ section {
   color: var(--color-primary);
   transition: ease-in-out 0.3s;
 }
+
 .services .icon-box a:hover{
   background-color: var(--color-white);
   color: var(--color-secondary);
@@ -1552,6 +1553,7 @@ section {
 
 .services .icon-box:hover h4 a {
   color: var(--color-secondary);
+  border-radius: 10px;
 }
 
 .services__content {
