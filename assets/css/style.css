@@ -863,7 +863,7 @@ h6 {
   );
 }
 
-@media (max-width: 389px) {
+@media (max-width: 575px) {
   .clay-card--hero {
     --clay-border-radius: none;
     --clay-background: linear-gradient(
