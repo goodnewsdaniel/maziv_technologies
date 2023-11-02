@@ -243,6 +243,8 @@ h6 {
     height: 56px;
   }
 }
+
+
 /* Silver Colors */
 .silver-waves {
   position: absolute;
@@ -278,7 +280,7 @@ h6 {
 @media (max-width: 767px) {
   .silver-waves svg {
     width: calc(100% + 1.3px);
-    height: 56px;
+    height: 70px;
   }
 }
 /* Section Wave End */
@@ -1047,6 +1049,11 @@ h6 {
   .create {
     color: var(--color-secondary);
   }
+
+
+  #hero .btn-watch-video {
+    width: 100%;
+  }
 }
 
 @-webkit-keyframes up-down {
@@ -1267,10 +1274,10 @@ section {
   margin-top: 5px;
 }
 
-.why-us .content p {
+/* .why-us .content p {
   font-size: 1rem;
   color: var(--color-primary);
-}
+} */
 
 .why-us .img {
   background-size: contain;
